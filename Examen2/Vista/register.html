@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Crea tu cuenda de google</h1>
+    Nombre
+    <input type="text" name="nombre" id="nombre"><br><br>
+
+    Nombre de usuario
+    <input type="text" name="email" id="email" value="@gmail.com"><br><br>
+
+    Contraseña
+    <input type="text"  name="password" id="password">
+
+    Repetir contraseña
+    <input type="text" name="password2" id="password2"><br><br>
+
+    <label for="hombre">Hombre</label><input type="radio" name="sexo" id="hombre" value="hombre">
+    <label for="mujer">Mujer</label><input type="radio" name="sexo" id="mujer" value="mujer"><br><br>
+    <input type="submit" id="registro" value="Registrarse" >
+    <br><br><a href="login.html">Login</a>
+</body>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../Modelo/Usuario.js"></script>
+<script src="../Modelo/Mensaje.js"></script>
+<script src="../Controlador/registro.js"></script>
+</html>
