@@ -1,88 +1,9 @@
 /// <reference path="../node_modules/jquery/dist/jquery.min.js" />
-var Proyecto = /** @class */ (function () {
-    function Proyecto(titulo) {
-        this.titulo = titulo;
-    }
-    Object.defineProperty(Proyecto.prototype, "getTitulo", {
-        get: function () {
-            return this.titulo;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Proyecto.prototype, "setTitulo", {
-        set: function (value) {
-            this.titulo = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Proyecto;
-}());
-var Usuario = /** @class */ (function () {
-    function Usuario(usuario, contrasena) {
-        this.usuario = usuario;
-        this.contrasena = contrasena;
-    }
-    Object.defineProperty(Usuario.prototype, "getColor", {
-        get: function () {
-            return this.color;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Usuario.prototype, "setColor", {
-        set: function (value) {
-            this.color = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Usuario.prototype, "getUsuario", {
-        get: function () {
-            return this.usuario;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Usuario.prototype, "setUsuario", {
-        set: function (value) {
-            this.usuario = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Usuario.prototype, "getContrasena", {
-        get: function () {
-            return this.contrasena;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Usuario.prototype, "setContrasena", {
-        set: function (value) {
-            this.contrasena = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Usuario.prototype, "getListaProyectos", {
-        get: function () {
-            return this.listaProyectos;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Usuario.prototype, "setListaProyectos", {
-        set: function (value) {
-            this.listaProyectos = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Usuario;
-}());
+/// <reference path="../Modelo/Proyecto.js" />
+/// <reference path="../Modelo/Usuario.js" />
+// @ts-ignore
 var listaUsuarios = [];
+// @ts-ignore
 var listaProyectos = [];
 $(document).ready(function () {
     try {
@@ -100,12 +21,15 @@ $(document).ready(function () {
     }
 });
 function alta() {
+    // @ts-ignore
     var listaUsu = JSON.parse(localStorage.getItem("datosUsuario"));
     var usuario = $("#usuario").val().toString();
     var contrasena = $("#contrasena").val().toString();
+    // @ts-ignore
     var usu1 = new Usuario(usuario, contrasena);
     if (regexUsuario(usuario) && regexContrasena(contrasena)) {
         var color = prompt("Que color quieres de fondo?");
+        // @ts-ignore
         var listaPro = [];
         // @ts-ignore
         usu1.color = color;
@@ -116,6 +40,7 @@ function alta() {
     }
 }
 function consulta() {
+    // @ts-ignore
     var listaUsu = JSON.parse(localStorage.getItem("datosUsuario"));
     var usuario = $("#usuario").val().toString();
     var contrasena = $("#contrasena").val().toString();
@@ -138,12 +63,15 @@ function consulta() {
     $("body").css("background-color", colorusu);
 }
 function anadir() {
+    // @ts-ignore
     var listaUsu = JSON.parse(localStorage.getItem("datosUsuario"));
+    // @ts-ignore
     var usuLog = JSON.parse(localStorage.getItem("usuarioLog"));
     for (var x = 0; x < listaUsu.length; x++) {
         // @ts-ignore
         if (listaUsu[x].usuario == usuLog) {
             var proy = prompt("Titulo del proyecto");
+            // @ts-ignore
             var proy1 = new Proyecto(proy);
             // @ts-ignore
             listaUsu[x].listaProyectos.push(proy1);
@@ -153,10 +81,13 @@ function anadir() {
     consulta();
 }
 function borrar() {
+    // @ts-ignore
     var usuarios = JSON.parse(localStorage.getItem('datosUsuario'));
+    // @ts-ignore
     var usuLog = JSON.parse(localStorage.getItem("usuarioLog"));
     // @ts-ignore
     var usu = usuarios.find(function (o) { return o.usuario == usuLog; });
+    // @ts-ignore
     var proyectos = usu.listaProyectos;
     var titulo = prompt('cual quieres eliminar introduce el titulo');
     // @ts-ignore
@@ -172,6 +103,7 @@ function borrar() {
     consulta();
 }
 function crearUsuario() {
+    // @ts-ignore
     var usu = new Usuario("unai", "123456");
     //@ts-ignore
     usu.color = "blue";
@@ -181,7 +113,9 @@ function crearUsuario() {
     localStorage.setItem("datosUsuario", JSON.stringify(listaUsuarios));
 }
 function crearProyectos() {
+    // @ts-ignore
     var proy1 = new Proyecto("proyecto1");
+    // @ts-ignore
     var proy2 = new Proyecto("proyecto2");
     listaProyectos.push(proy1);
     listaProyectos.push(proy2);

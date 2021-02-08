@@ -40,4 +40,3 @@ function crearDatos() {
     listaUsuarios.push(usu);
     localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuarios));
 }
-/// <reference path="../Modelo/Mensaje.js" />

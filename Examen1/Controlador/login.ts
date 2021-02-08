@@ -1,67 +1,10 @@
 /// <reference path="../node_modules/jquery/dist/jquery.min.js" />
-class Proyecto{
-    private titulo:string;
+/// <reference path="../Modelo/Proyecto.js" />
+/// <reference path="../Modelo/Usuario.js" />
 
-
-    constructor(titulo: string) {
-        this.titulo = titulo;
-    }
-
-    get getTitulo(): string {
-        return this.titulo;
-    }
-
-    set setTitulo(value: string) {
-        this.titulo = value;
-    }
-
-}
-class Usuario{
-    private usuario:string;
-    private contrasena:string;
-    private color:string;
-    private listaProyectos:Array<Proyecto>;
-
-    constructor(usuario: string, contrasena: string) {
-        this.usuario = usuario;
-        this.contrasena = contrasena;
-    }
-
-    get getColor(): string {
-        return this.color;
-    }
-
-    set setColor(value: string) {
-        this.color = value;
-    }
-
-    get getUsuario(): string {
-        return this.usuario;
-    }
-
-    set setUsuario(value: string) {
-        this.usuario = value;
-    }
-
-    get getContrasena(): string {
-        return this.contrasena;
-    }
-
-    set setContrasena(value: string) {
-        this.contrasena = value;
-    }
-
-    get getListaProyectos(): Array<Proyecto> {
-        return this.listaProyectos;
-    }
-
-    set setListaProyectos(value: Array<Proyecto>) {
-        this.listaProyectos = value;
-    }
-
-}
-
+// @ts-ignore
 let listaUsuarios: Array<Usuario>=[];
+// @ts-ignore
 let listaProyectos: Array<Proyecto>=[];
 
 $(document).ready(function () {
@@ -81,12 +24,15 @@ $(document).ready(function () {
 
 });
 function alta():void{
+    // @ts-ignore
     let listaUsu:Array<Usuario> = JSON.parse(localStorage.getItem("datosUsuario"));
     var usuario:string = $("#usuario").val().toString();
     var contrasena:string = $("#contrasena").val().toString();
+    // @ts-ignore
     let usu1:Usuario= new Usuario(usuario, contrasena);
     if (regexUsuario(usuario) && regexContrasena(contrasena)) {
         var color: string = prompt("Que color quieres de fondo?");
+        // @ts-ignore
         let listaPro: Array<Proyecto> = [];
         // @ts-ignore
         usu1.color = color;
@@ -98,6 +44,7 @@ function alta():void{
     }
 }
 function consulta():void{
+    // @ts-ignore
     let listaUsu:Array<Usuario> = JSON.parse(localStorage.getItem("datosUsuario"));
     var usuario:string = $("#usuario").val().toString();
     var contrasena:string = $("#contrasena").val().toString();
@@ -124,12 +71,15 @@ function consulta():void{
 
 }
 function anadir():void{
+    // @ts-ignore
     let listaUsu:Array<Usuario>=JSON.parse(localStorage.getItem("datosUsuario"));
+    // @ts-ignore
     let usuLog:Array<Usuario>=JSON.parse(localStorage.getItem("usuarioLog"));
     for (var x=0; x<listaUsu.length;x++){
         // @ts-ignore
         if (listaUsu[x].usuario == usuLog){
             var proy= prompt("Titulo del proyecto");
+            // @ts-ignore
             var proy1:Proyecto = new Proyecto(proy);
 
             // @ts-ignore
@@ -141,12 +91,14 @@ function anadir():void{
 
 }
 function borrar():void {
+    // @ts-ignore
     let usuarios: Array<Usuario> = JSON.parse(localStorage.getItem('datosUsuario'));
+    // @ts-ignore
     let usuLog: Array<Usuario> = JSON.parse(localStorage.getItem("usuarioLog"));
 
     // @ts-ignore
     let usu = usuarios.find(o => o.usuario == usuLog);
-
+    // @ts-ignore
     let proyectos: Array<Proyecto> = usu.listaProyectos;
 
     let titulo: string = prompt('cual quieres eliminar introduce el titulo');
@@ -165,6 +117,7 @@ function borrar():void {
 }
 
 function crearUsuario():void{
+    // @ts-ignore
     let usu:Usuario = new Usuario("unai","123456");
     //@ts-ignore
     usu.color = "blue";
@@ -176,7 +129,9 @@ function crearUsuario():void{
 }
 
 function crearProyectos(){
+    // @ts-ignore
     var proy1:Proyecto = new Proyecto("proyecto1");
+    // @ts-ignore
     var proy2:Proyecto = new Proyecto("proyecto2");
     listaProyectos.push(proy1);
     listaProyectos.push(proy2);
