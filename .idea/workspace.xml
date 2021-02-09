@@ -20,23 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ba6fc31-b985-4e17-8852-1734375b9b66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Examen1/Modelo/Proyecto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Examen1/Modelo/Usuario.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Examen1/webcomponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen1/.idea/Examen1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen1/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen1/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen1/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen1/Controlador/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/Examen1/Controlador/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen1/Controlador/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen1/Controlador/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen1/Vista/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Examen1/Vista/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen2/.idea/Examen2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen2/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen2/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen2/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen2/Controlador/login.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen2/Controlador/mensajes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen2/Vista/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen2/Vista/mensajes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examen1/Modelo/Usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/Examen1/Modelo/Usuario.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examen1/Modelo/Usuario.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen1/Modelo/Usuario.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Examen2/Controlador/registro.js" beforeDir="false" afterPath="$PROJECT_DIR$/Examen2/Controlador/registro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examen2/Controlador/registro.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen2/Controlador/registro.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examen2/Vista/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Examen2/Vista/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +39,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -61,9 +55,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -77,6 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612810887713</updated>
       <workItem from="1612810889781" duration="1846000" />
+      <workItem from="1612855527401" duration="7703000" />
     </task>
     <servers />
   </component>
@@ -90,6 +92,8 @@
         <option value="$PROJECT_DIR$/Examen1/Controlador/login.js" />
         <option value="$PROJECT_DIR$/Examen1/Modelo/Usuario.js" />
         <option value="$PROJECT_DIR$/Examen1/Modelo/Proyecto.js" />
+        <option value="$PROJECT_DIR$/Examen2/Controlador/login.js" />
+        <option value="$PROJECT_DIR$/Examen2/Controlador/mensajes.js" />
       </list>
     </option>
   </component>
@@ -103,8 +107,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1165" y="218" width="812" height="727" key="#Intentions" timestamp="1612857721994">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="1165" y="218" width="812" height="727" key="#Intentions/0.0.2048.1112@0.0.2048.1112" timestamp="1612857721994" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1612815358470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

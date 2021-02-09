@@ -1,7 +1,9 @@
+/// <reference path="../Modelo/Proyecto.js" />
 class Usuario{
     private usuario:string;
     private contrasena:string;
     private color:string;
+    // @ts-ignore
     private listaProyectos:Array<Proyecto>;
 
     constructor(usuario: string, contrasena: string) {

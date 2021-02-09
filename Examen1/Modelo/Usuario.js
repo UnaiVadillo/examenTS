@@ -1,3 +1,4 @@
+/// <reference path="../Modelo/Proyecto.js" />
 var Usuario = /** @class */ (function () {
     function Usuario(usuario, contrasena) {
         this.usuario = usuario;
